@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" role="img" aria-labelledby="trade-title trade-desc">
+  <title id="trade-title">Simplified public trade-registry hybrid RAG architecture</title>
+  <desc id="trade-desc">User query goes to an intelligent router, which selects semantic retrieval, structured query, or combined evidence before response refinement and grounded answer generation.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f7f8f5}.box{fill:#fff;stroke:#d8ddd6;stroke-width:2}.soft{fill:#edf5f2;stroke:#bdd5cf;stroke-width:2}.text{fill:#18201d;font:600 17px Arial,Helvetica,sans-serif}.small{fill:#5d6862;font:500 13px Arial,Helvetica,sans-serif}.accent{fill:#0f766e}.line{stroke:#0f766e;stroke-width:2.5;fill:none;marker-end:url(#arrow)}.thin{stroke:#7aa8a0;stroke-width:2;fill:none}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" class="accent"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="760" height="520" rx="18"/>
+  <rect class="box" x="250" y="28" width="260" height="50" rx="8"/>
+  <text class="text" x="380" y="59" text-anchor="middle">User Query</text>
+  <path class="line" d="M380 78V112"/>
+  <rect class="box" x="250" y="112" width="260" height="54" rx="8"/>
+  <text class="text" x="380" y="145" text-anchor="middle">Intelligent Router</text>
+  <path class="line" d="M300 166C220 200 170 222 150 260"/>
+  <path class="line" d="M460 166C540 200 590 222 610 260"/>
+  <rect class="box" x="46" y="260" width="250" height="124" rx="10"/>
+  <text class="text" x="171" y="292" text-anchor="middle">Semantic / RAG Path</text>
+  <rect class="soft" x="76" y="318" width="92" height="36" rx="8"/>
+  <text class="small" x="122" y="341" text-anchor="middle">Dense</text>
+  <rect class="soft" x="178" y="318" width="88" height="36" rx="8"/>
+  <text class="small" x="222" y="341" text-anchor="middle">BM25</text>
+  <text class="small" x="171" y="372" text-anchor="middle">fusion + reranking</text>
+  <rect class="box" x="464" y="260" width="250" height="124" rx="10"/>
+  <text class="text" x="589" y="292" text-anchor="middle">Structured Query Path</text>
+  <rect class="soft" x="500" y="318" width="178" height="36" rx="8"/>
+  <text class="small" x="589" y="341" text-anchor="middle">QueryForge / SQL</text>
+  <text class="small" x="589" y="372" text-anchor="middle">PostgreSQL records</text>
+  <path class="line" d="M296 342C338 370 356 390 380 420"/>
+  <path class="line" d="M464 342C422 370 404 390 380 420"/>
+  <rect class="box" x="250" y="420" width="260" height="42" rx="8"/>
+  <text class="text" x="380" y="447" text-anchor="middle">Evidence Layer</text>
+  <path class="line" d="M380 462V488"/>
+  <rect class="box" x="250" y="488" width="260" height="26" rx="8"/>
+  <text class="small" x="380" y="506" text-anchor="middle">Response refiner -> grounded answer</text>
+  <path class="thin" d="M168 384C208 414 254 430 250 441"/>
+  <path class="thin" d="M592 384C552 414 506 430 510 441"/>
+</svg>

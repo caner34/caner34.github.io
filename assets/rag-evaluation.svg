@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" role="img" aria-labelledby="rag-title rag-desc">
+  <title id="rag-title">RAG evaluation pipeline</title>
+  <desc id="rag-desc">User question flows through query handling, BM25 dense and hybrid retrieval, reranking, context assembly, grounded answer generation, citations, refusal behavior, and evaluation.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f7f8f5}.box{fill:#fff;stroke:#d8ddd6;stroke-width:2}.soft{fill:#edf5f2;stroke:#bdd5cf;stroke-width:2}.text{fill:#18201d;font:600 18px Arial,Helvetica,sans-serif}.small{fill:#5d6862;font:500 14px Arial,Helvetica,sans-serif}.accent{fill:#0f766e}.line{stroke:#0f766e;stroke-width:2.5;fill:none;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" class="accent"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="760" height="520" rx="18"/>
+  <rect class="box" x="250" y="28" width="260" height="54" rx="8"/>
+  <text class="text" x="380" y="62" text-anchor="middle">User Question</text>
+  <path class="line" d="M380 82V118"/>
+  <rect class="box" x="250" y="118" width="260" height="54" rx="8"/>
+  <text class="text" x="380" y="152" text-anchor="middle">Query / Filters</text>
+  <path class="line" d="M380 172V208"/>
+  <rect class="box" x="80" y="208" width="600" height="122" rx="10"/>
+  <text class="text" x="380" y="238" text-anchor="middle">Retrieval</text>
+  <rect class="soft" x="116" y="262" width="140" height="42" rx="8"/>
+  <text class="small" x="186" y="288" text-anchor="middle">BM25</text>
+  <rect class="soft" x="310" y="262" width="140" height="42" rx="8"/>
+  <text class="small" x="380" y="288" text-anchor="middle">Dense</text>
+  <rect class="soft" x="504" y="262" width="140" height="42" rx="8"/>
+  <text class="small" x="574" y="288" text-anchor="middle">Hybrid</text>
+  <path class="line" d="M380 330V366"/>
+  <rect class="box" x="250" y="366" width="260" height="46" rx="8"/>
+  <text class="text" x="380" y="396" text-anchor="middle">Reranking</text>
+  <path class="line" d="M250 389H120V450"/>
+  <path class="line" d="M510 389H640V450"/>
+  <path class="line" d="M380 412V450"/>
+  <rect class="box" x="36" y="450" width="170" height="46" rx="8"/>
+  <text class="small" x="121" y="479" text-anchor="middle">Context Assembly</text>
+  <rect class="box" x="295" y="450" width="170" height="46" rx="8"/>
+  <text class="small" x="380" y="479" text-anchor="middle">Grounded Answer</text>
+  <rect class="box" x="554" y="450" width="170" height="46" rx="8"/>
+  <text class="small" x="639" y="479" text-anchor="middle">Citations / Refusal</text>
+  <path class="line" d="M465 473H552"/>
+  <path class="line" d="M206 473H293"/>
+  <text class="small" x="380" y="510" text-anchor="middle">Evaluation tracks retrieval, answer checks, citations, refusals, and latency.</text>
+</svg>

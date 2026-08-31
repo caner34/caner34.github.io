@@ -41,6 +41,7 @@ body {
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 a {
@@ -135,6 +136,10 @@ h1 {
   font-size: clamp(3rem, 8vw, 5.8rem);
   line-height: 0.98;
   letter-spacing: 0;
+}
+
+h1 span {
+  display: inline-block;
 }
 
 h2 {
@@ -284,6 +289,230 @@ h3 {
   font-size: 0.96rem;
 }
 
+.outcomes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0 0 28px;
+}
+
+.metric {
+  display: grid;
+  gap: 6px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.metric strong {
+  color: var(--accent-strong);
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1.1;
+}
+
+.metric span {
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+.metric.callout {
+  margin: 20px 0 0;
+  background: var(--tag-bg);
+}
+
+.project-stack {
+  display: grid;
+  gap: 26px;
+}
+
+.project-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 28px;
+  align-items: stretch;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.project-feature.flip .project-copy {
+  order: 2;
+}
+
+.project-feature.flip .project-visual {
+  order: 1;
+}
+
+.project-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-copy h3 {
+  max-width: 620px;
+  margin-bottom: 12px;
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  line-height: 1.12;
+}
+
+.project-copy p:not(.eyebrow) {
+  color: var(--muted);
+}
+
+.evidence-note {
+  margin: 16px 0 0;
+  padding-left: 14px;
+  border-left: 3px solid var(--accent);
+}
+
+.project-copy .tags {
+  margin: 20px 0 0;
+}
+
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.project-visual {
+  display: grid;
+  min-width: 0;
+  gap: 14px;
+  align-content: center;
+}
+
+.project-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f7f8f5;
+}
+
+.visual-title,
+.metric-context,
+.example-label {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.visual-title,
+.example-label {
+  color: var(--accent-strong);
+  font-weight: 800;
+}
+
+.table-wrap {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.comparison-table {
+  width: 100%;
+  min-width: 0;
+  border-collapse: collapse;
+  background: var(--surface);
+  font-size: 0.9rem;
+}
+
+.comparison-table caption {
+  padding: 10px 12px;
+  color: var(--muted);
+  text-align: left;
+  caption-side: top;
+  font-weight: 700;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 10px 12px;
+  border-top: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: normal;
+}
+
+.comparison-table thead th {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.comparison-table tbody th {
+  color: var(--accent-strong);
+  font-weight: 800;
+}
+
+.example-panel {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--tag-bg);
+}
+
+.example-panel .question {
+  margin: 6px 0 12px;
+  color: var(--text);
+  font-weight: 750;
+}
+
+.example-panel dl {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.example-panel dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  border-top: 1px solid var(--line);
+  padding-top: 8px;
+}
+
+.example-panel dt {
+  color: var(--muted);
+}
+
+.example-panel dd {
+  margin: 0;
+  color: var(--text);
+  font-weight: 800;
+  text-align: right;
+}
+
+.example-panel.split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 16px;
+}
+
+.example-panel.split p {
+  margin: 0 0 5px;
+}
+
+.example-panel pre {
+  min-width: 0;
+  margin: 0;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: var(--text);
+  font:
+    0.86rem/1.5 "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
 .timeline {
   display: grid;
   gap: 16px;
@@ -352,15 +581,26 @@ h3 {
 
   .nav-links {
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 28px;
   }
 
   .hero {
     padding: 72px 0 52px;
   }
 
+  h1 {
+    font-size: clamp(2.5rem, 12vw, 3.4rem);
+  }
+
+  h2 {
+    font-size: clamp(1.65rem, 8vw, 2.1rem);
+  }
+
   .about,
   .project-grid,
+  .outcomes,
+  .project-feature,
   .timeline article,
   .footer {
     grid-template-columns: 1fr;
@@ -368,6 +608,19 @@ h3 {
 
   .about {
     gap: 28px;
+  }
+
+  .project-feature {
+    padding: 20px;
+  }
+
+  .project-feature.flip .project-copy,
+  .project-feature.flip .project-visual {
+    order: initial;
+  }
+
+  .example-panel.split {
+    grid-template-columns: 1fr;
   }
 
   .project-card {
@@ -400,5 +653,24 @@ h3 {
 
   .section {
     padding: 44px 0;
+  }
+
+  .focus {
+    font-size: 1rem;
+  }
+
+  .comparison-table {
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .nav,
+  .hero,
+  .section,
+  .footer {
+    width: min(100% - 24px, 358px);
+    margin-left: 16px;
+    margin-right: auto;
   }
 }

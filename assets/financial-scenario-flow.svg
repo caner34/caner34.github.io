@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" role="img" aria-labelledby="fin-title fin-desc">
+  <title id="fin-title">Financial scenario workflow</title>
+  <desc id="fin-desc">Natural-language scenario is parsed into structured assumptions, validated, planned into deterministic financial tools, explained, audited, and kept behind a human approval boundary.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f7f8f5}.box{fill:#fff;stroke:#d8ddd6;stroke-width:2}.soft{fill:#edf5f2;stroke:#bdd5cf;stroke-width:2}.text{fill:#18201d;font:600 17px Arial,Helvetica,sans-serif}.small{fill:#5d6862;font:500 13px Arial,Helvetica,sans-serif}.accent{fill:#0f766e}.line{stroke:#0f766e;stroke-width:2.5;fill:none;marker-end:url(#arrow)}.dash{stroke:#0f766e;stroke-width:2;stroke-dasharray:6 6;fill:none;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" class="accent"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="760" height="520" rx="18"/>
+  <rect class="box" x="48" y="36" width="270" height="52" rx="8"/>
+  <text class="text" x="183" y="68" text-anchor="middle">Natural-language scenario</text>
+  <path class="line" d="M183 88V120"/>
+  <rect class="box" x="48" y="120" width="270" height="52" rx="8"/>
+  <text class="text" x="183" y="152" text-anchor="middle">Scenario parser</text>
+  <path class="line" d="M183 172V204"/>
+  <rect class="box" x="48" y="204" width="270" height="52" rx="8"/>
+  <text class="text" x="183" y="236" text-anchor="middle">Structured assumptions</text>
+  <path class="line" d="M318 230H388"/>
+  <rect class="box" x="388" y="120" width="308" height="220" rx="10"/>
+  <text class="text" x="542" y="150" text-anchor="middle">Deterministic tools</text>
+  <rect class="soft" x="420" y="178" width="112" height="40" rx="8"/>
+  <text class="small" x="476" y="203" text-anchor="middle">FX</text>
+  <rect class="soft" x="552" y="178" width="112" height="40" rx="8"/>
+  <text class="small" x="608" y="203" text-anchor="middle">Energy</text>
+  <rect class="soft" x="420" y="238" width="112" height="40" rx="8"/>
+  <text class="small" x="476" y="263" text-anchor="middle">Input cost</text>
+  <rect class="soft" x="552" y="238" width="112" height="40" rx="8"/>
+  <text class="small" x="608" y="263" text-anchor="middle">Cash flow</text>
+  <text class="small" x="542" y="316" text-anchor="middle">Pydantic inputs, outputs, and validation</text>
+  <rect class="box" x="48" y="288" width="270" height="52" rx="8"/>
+  <text class="text" x="183" y="320" text-anchor="middle">Planner / tool selection</text>
+  <path class="line" d="M318 314H386"/>
+  <path class="line" d="M542 340V376"/>
+  <rect class="box" x="388" y="376" width="308" height="52" rx="8"/>
+  <text class="text" x="542" y="408" text-anchor="middle">Intermediate results</text>
+  <path class="line" d="M388 402H318"/>
+  <rect class="box" x="48" y="376" width="270" height="52" rx="8"/>
+  <text class="text" x="183" y="408" text-anchor="middle">Explanation and risk notes</text>
+  <path class="line" d="M183 428V464"/>
+  <rect class="box" x="48" y="464" width="270" height="38" rx="8"/>
+  <text class="small" x="183" y="488" text-anchor="middle">Audit trace + human approval boundary</text>
+  <rect class="soft" x="556" y="36" width="140" height="52" rx="8"/>
+  <text class="small" x="626" y="58" text-anchor="middle">MCP tool</text>
+  <text class="small" x="626" y="76" text-anchor="middle">interface</text>
+  <path class="dash" d="M626 88V118"/>
+</svg>
