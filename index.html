@@ -224,6 +224,25 @@
                   reference-question set. Not a benchmark result from the public repository.
                 </span>
               </div>
+              <div class="table-wrap article-metrics">
+                <table class="comparison-table">
+                  <caption>Article-reported professional metrics</caption>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Embedding fine-tuning</th>
+                      <td>~10% Hit-rate improvement</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Reranking</th>
+                      <td>~70% false-to-true conversion for missed or wrong questions</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Serving optimization</th>
+                      <td>Up to 41% lower VRAM requirement; ~32 tokens/sec on L40S</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <ul class="tags" aria-label="Technologies used">
                 <li>Hybrid RAG</li>
                 <li>PostgreSQL</li>
@@ -237,8 +256,14 @@
               </div>
             </div>
             <div class="project-visual">
-              <p class="visual-title">Simplified public architecture</p>
-              <img src="assets/trade-registry-architecture.svg" alt="Simplified trade-registry architecture with router, semantic retrieval, structured query, evidence layer, and response refiner">
+              <p class="visual-title">Professional system - public runtime figure</p>
+              <a class="figure-link" href="assets/trade-registry-runtime-professional.png" aria-label="Open Trade Registry Runtime architecture figure">
+                <img class="professional-figure" src="assets/trade-registry-runtime-professional.png" alt="Public DataSpecta runtime architecture figure for the Trade Registry Hybrid RAG professional system">
+              </a>
+              <p class="metric-context">
+                Public architecture figure from the DataSpecta case study. The repository
+                contains generalized notes and synthetic examples.
+              </p>
               <div class="table-wrap">
                 <table class="comparison-table">
                   <thead>
@@ -280,6 +305,25 @@
                 classification, orientation, structured-field, schema, and PII checks.
                 The fixtures are not an estimate of real-world OCR accuracy.
               </p>
+              <div class="table-wrap article-metrics">
+                <table class="comparison-table">
+                  <caption>Article-reported professional metrics</caption>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Processing speed</th>
+                      <td>8 seconds/document</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Classification cost</th>
+                      <td>US$0.007/classification</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Audit trail</th>
+                      <td>100% of classifications logged</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <ul class="tags" aria-label="Technologies used">
                 <li>Document AI</li>
                 <li>OCR</li>
@@ -294,6 +338,14 @@
             </div>
             <div class="project-visual">
               <img src="assets/document-intelligence-pipeline.svg" alt="Document-processing pipeline from PDF or image through validation, OCR, classification, extraction, PII redaction, and JSON response">
+              <figure class="article-figure">
+                <a class="figure-link" href="assets/legal-document-classifier-architecture-professional.png" aria-label="Open Legal Document Classifier architecture figure">
+                  <img class="professional-figure dark-figure" src="assets/legal-document-classifier-architecture-professional.png" alt="Public DataSpecta architecture figure for the Legal Document Classifier professional system">
+                </a>
+                <figcaption>
+                  Related professional work - public DataSpecta architecture figure.
+                </figcaption>
+              </figure>
               <div class="example-panel split">
                 <div>
                   <p class="example-label">Synthetic invoice</p>

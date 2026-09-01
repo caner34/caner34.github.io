@@ -397,6 +397,33 @@ h3 {
   background: #f7f8f5;
 }
 
+.project-visual img.professional-figure {
+  background: #fff;
+  padding: 4px;
+}
+
+.project-visual img.dark-figure {
+  background: #050505;
+}
+
+.figure-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.article-figure {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.article-figure figcaption {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
 .visual-title,
 .metric-context,
 .example-label {
@@ -417,6 +444,14 @@ h3 {
   overflow-x: auto;
   border: 1px solid var(--line);
   border-radius: 8px;
+}
+
+.project-copy .table-wrap {
+  margin-top: 18px;
+}
+
+.article-metrics .comparison-table {
+  font-size: 0.86rem;
 }
 
 .comparison-table {
